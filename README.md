@@ -27,6 +27,7 @@ viz/manifest.js       dataset manifest + series metadata
 viz/subjects/*.js     45 per-subject CGM traces (loaded on demand)
 assets/figures/       8 figures reproduced from the cited publications
 figures/extracted/    10 figures extracted from PubMed Central open-access articles
+replication/          detection method replications on CGMacros (see replication/README.md)
 ```
 
 The page loads nothing from the network at view time: open `index.html` from a local

@@ -1,0 +1,1004 @@
+{
+ "CGMacros-001": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.6756756756756757,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 29.0,
+  "val_TP": 5,
+  "val_FP": 0,
+  "val_FN": 3,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-002": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 29.125,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-003": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 35.285714285714285,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-004": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 31.428571428571427,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 1
+ },
+ "CGMacros-005": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.4
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_3"
+  ],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 92.5,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 6
+ },
+ "CGMacros-006": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 30.5,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-008": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 29.333333333333332,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-009": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 125.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 71.83333333333333,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 66
+ },
+ "CGMacros-010": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7142857142857143,
+  "val_FP_per_day": 0.5,
+  "val_delay_mean": 20.2,
+  "val_TP": 5,
+  "val_FP": 2,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-011": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 1.1,
+   "Gp_min_2": 1.2
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 17.5,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 80
+ },
+ "CGMacros-012": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.875,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 34.42857142857143,
+  "val_TP": 7,
+  "val_FP": 1,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-013": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 72.83333333333333,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-014": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.9,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 26.0,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 41
+ },
+ "CGMacros-015": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.9
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min"
+  ],
+  "val_F2": 0.7692307692307693,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 29.666666666666668,
+  "val_TP": 6,
+  "val_FP": 1,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-017": {
+  "params": {
+   "tau_F": 6.0,
+   "G_min": 110.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 11.428571428571429,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 33
+ },
+ "CGMacros-018": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 140.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8620689655172413,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 11.2,
+  "val_TP": 5,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 3,
+  "n_tied": 11
+ },
+ "CGMacros-019": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 41.857142857142854,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 55
+ },
+ "CGMacros-020": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 130.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.6060606060606061,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 24.75,
+  "val_TP": 4,
+  "val_FP": 1,
+  "val_FN": 3,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-021": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 120.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 31.142857142857142,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-022": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 115.0,
+   "Gp_min_3": 1.0,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F"
+  ],
+  "grid_edges_forced": [
+   "tau_F"
+  ],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 22.0,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 9
+ },
+ "CGMacros-023": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.2
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 31.75,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 86
+ },
+ "CGMacros-027": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.9
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 23.0,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 121
+ },
+ "CGMacros-028": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.875,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 44.0,
+  "val_TP": 7,
+  "val_FP": 1,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 55
+ },
+ "CGMacros-029": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.7
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.5555555555555556,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 37.75,
+  "val_TP": 4,
+  "val_FP": 0,
+  "val_FN": 4,
+  "val_days": 4,
+  "n_tied": 68
+ },
+ "CGMacros-030": {
+  "params": {
+   "tau_F": 8.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 10.166666666666666,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 3,
+  "n_tied": 99
+ },
+ "CGMacros-031": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 39.5,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 154
+ },
+ "CGMacros-032": {
+  "params": {
+   "tau_F": 7.0,
+   "G_min": 125.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.4
+  },
+  "grid_edges": [
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.5714285714285714,
+  "val_FP_per_day": 0.75,
+  "val_delay_mean": 54.75,
+  "val_TP": 4,
+  "val_FP": 3,
+  "val_FN": 3,
+  "val_days": 4,
+  "n_tied": 32
+ },
+ "CGMacros-033": {
+  "params": {
+   "tau_F": 8.0,
+   "G_min": 115.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_3"
+  ],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 11.125,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 1
+ },
+ "CGMacros-034": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 105.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.4
+  },
+  "grid_edges": [
+   "tau_F",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_3"
+  ],
+  "val_F2": 0.5405405405405406,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 37.5,
+  "val_TP": 4,
+  "val_FP": 1,
+  "val_FN": 4,
+  "val_days": 4,
+  "n_tied": 1
+ },
+ "CGMacros-035": {
+  "params": {
+   "tau_F": 8.0,
+   "G_min": 100.0,
+   "Gp_min_3": 1.0,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min"
+  ],
+  "grid_edges_forced": [
+   "tau_F"
+  ],
+  "val_F2": 0.7142857142857143,
+  "val_FP_per_day": 1.0,
+  "val_delay_mean": 40.333333333333336,
+  "val_TP": 6,
+  "val_FP": 4,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 81
+ },
+ "CGMacros-036": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 140.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min"
+  ],
+  "val_F2": 0.975609756097561,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 30.75,
+  "val_TP": 8,
+  "val_FP": 1,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 33
+ },
+ "CGMacros-038": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.2
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_3"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 30.285714285714285,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 4
+ },
+ "CGMacros-039": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 1.6,
+   "Gp_min_2": 1.7
+  },
+  "grid_edges": [
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.7894736842105263,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 25.0,
+  "val_TP": 6,
+  "val_FP": 0,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 450
+ },
+ "CGMacros-041": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 24.857142857142858,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 77
+ },
+ "CGMacros-042": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 1.2,
+   "Gp_min_2": 1.3
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.8064516129032258,
+  "val_FP_per_day": 0.6666666666666666,
+  "val_delay_mean": 43.8,
+  "val_TP": 5,
+  "val_FP": 2,
+  "val_FN": 1,
+  "val_days": 3,
+  "n_tied": 490
+ },
+ "CGMacros-043": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 33.285714285714285,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 33
+ },
+ "CGMacros-044": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F"
+  ],
+  "val_F2": 0.7692307692307693,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 38.833333333333336,
+  "val_TP": 6,
+  "val_FP": 1,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 44
+ },
+ "CGMacros-045": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 1.0
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F"
+  ],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 39.142857142857146,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 22
+ },
+ "CGMacros-046": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.9
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3"
+  ],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 30.375,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 1
+ },
+ "CGMacros-047": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.9,
+   "Gp_min_2": 1.1
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.7692307692307693,
+  "val_FP_per_day": 0.25,
+  "val_delay_mean": 49.166666666666664,
+  "val_TP": 6,
+  "val_FP": 1,
+  "val_FN": 2,
+  "val_days": 4,
+  "n_tied": 540
+ },
+ "CGMacros-048": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 1.0,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 29.375,
+  "val_TP": 8,
+  "val_FP": 0,
+  "val_FN": 0,
+  "val_days": 4,
+  "n_tied": 11
+ },
+ "CGMacros-049": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 1.2,
+   "Gp_min_2": 1.2
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min"
+  ],
+  "grid_edges_forced": [],
+  "val_F2": 0.8974358974358975,
+  "val_FP_per_day": 0.0,
+  "val_delay_mean": 23.0,
+  "val_TP": 7,
+  "val_FP": 0,
+  "val_FN": 1,
+  "val_days": 4,
+  "n_tied": 52
+ }
+}

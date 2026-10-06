@@ -1,0 +1,5 @@
+group,n_subjects,subjects_with_eval_test_meals,test_BL_logged,test_BL_outside_window,test_BL_eval,test_breakfast_eval,test_lunch_eval,test_BL_scored_C05,test_days
+all,45,45,320,6,307,159,148,283,173.0
+T2D,14,14,100,3,94,48,46,89,55.1
+healthy,15,15,104,1,103,53,50,96,57.1
+prediabetes,16,16,116,2,110,58,52,98,60.8

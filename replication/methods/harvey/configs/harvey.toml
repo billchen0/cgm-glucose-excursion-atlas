@@ -1,0 +1,34 @@
+# Harvey (GRID) method settings. Merged over common/configs/cgmacros_eval.toml by
+# common.evaluation.load_config. Deviations: methods/harvey/docs/deviations.md.
+
+[methods.harvey]
+sampling_min = 5                     # native Dexcom 5-min readings
+spike_max_roc_mg_dl_per_min = 3.0    # Harvey 2014 Eq. 1 (3 mg/dL in a 1-minute period)
+event = "rising_edge"                # detection = first sample of each run of GRID+ = 1 (D-H4)
+
+[methods.harvey.grid]                # Hochsmann 2026 Supplementary Table 1, Equation 8
+G_min = [100, 140, 5]                # [start, stop, step], inclusive
+Gp_min_3 = [0.8, 1.8, 0.1]
+Gp_min_2 = [0.8, 1.8, 0.1]
+tau_F = [4, 8, 1]
+
+[methods.harvey.about]               # used only by the protocol README (common/evaluation/protocol.py)
+title = "Harvey GRID"
+paper = "Harvey RA et al. Design of the glucose rate increase detector. J Diabetes Sci Technol 2014;8(2):307-320. https://doi.org/10.1177/1932296814523881"
+implementation = "As implemented in the Hochsmann 2026 review (Supplementary Methods, Supplementary Table 1 Eq. 8)."
+description = [
+  "A noise-spike filter and a low-pass filter smooth the CGM signal.",
+  "The rate of change (ROC) comes from a 3-point Lagrange derivative.",
+  "A sample is GRID+ when filtered glucose > G_min and the last 3 ROC > G'_min,3 or the last 2 ROC > G'_min,2.",
+  "A detection is the first sample of each run of GRID+ (rising edge).",
+]
+fixed = ["spike_max_roc_mg_dl_per_min"]
+grid_source = "Hochsmann 2026 Supplementary Table 1, Equation 8"
+param_labels = { tau_F = "tau_F (min)", G_min = "G_min (mg/dL)", Gp_min_3 = "G'_min,3 (mg/dL/min)", Gp_min_2 = "G'_min,2 (mg/dL/min)" }
+deviations = "methods/harvey/docs/deviations.md"
+
+[methods.harvey.about.hochsmann2026_table2]   # Harvey row, review test set
+sensitivity_pct = 70.4
+fp_per_day = 0.26
+delay_mean_min = 37.3
+cohort = "16 healthy young adults, Libre 2 (1-min resampled to 5 min), 3 meals/day, afternoon detections suppressed"

@@ -1,0 +1,7 @@
+rule,route,adjacent_rule,stratum,participants,days,scored_hours,lockout_ignored,TP,FP,FN,sensitivity,precision,F2,FP_per_day,FP_per_hour,delay_median,delay_mean,sensitivity_lo,sensitivity_hi,precision_lo,precision_hi,F2_lo,F2_hi,FP_per_day_lo,FP_per_day_hi,FP_per_hour_lo,FP_per_hour_hi,delay_median_lo,delay_median_hi,delay_mean_lo,delay_mean_hi,n_delay_zero
+ours,B,excursion_end,overall,42,332,2904.3,0.0,511,204.0,149,0.7742,0.7147,0.7615,0.6145,0.0702,28.0,33.7025,0.7359,0.8072,0.66,0.7716,0.7287,0.7916,0.4589,0.7885,0.0526,0.0896,26.0,30.0,29.4349,38.6789,1.0
+ours,B,excursion_end,healthy,15,119,1089.8,0.0,176,95.0,61,0.7426,0.6494,0.7219,0.7983,0.0872,26.0,30.0682,0.6907,0.7983,0.5468,0.7615,0.6728,0.7715,0.4667,1.225,0.0507,0.1335,24.0,30.0,26.4935,33.7444,
+ours,B,excursion_end,prediabetes,13,103,850.4,0.0,157,47.0,46,0.7734,0.7696,0.7726,0.4563,0.0553,30.0,37.4777,0.6784,0.8424,0.6888,0.8541,0.694,0.8283,0.2596,0.7021,0.0317,0.0844,27.0,40.5,27.7264,50.2476,
+ours,B,excursion_end,T2D,14,110,964.1,0.0,178,62.0,42,0.8091,0.7417,0.7946,0.5636,0.0643,27.0,33.9663,0.7748,0.8409,0.6628,0.8233,0.7585,0.8274,0.3486,0.8182,0.0396,0.0927,22.0,32.0,27.2076,43.0611,
+ours,B,excursion_end,breakfast,42,332,,,278,,50,0.8476,,,,,24.0,29.705,0.7764,0.9086,,,,,,,,,22.0,25.0,25.4852,34.7448,
+ours,B,excursion_end,lunch,42,332,,,233,,99,0.7018,,,,,35.0,38.4721,0.6557,0.7462,,,,,,,,,33.0,38.0,33.4888,44.182,

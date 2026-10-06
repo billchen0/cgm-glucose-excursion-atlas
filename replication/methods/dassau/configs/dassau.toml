@@ -1,0 +1,72 @@
+# Dassau 2-of-3 and 3-of-4 method settings. Merged over common/configs/cgmacros_eval.toml by
+# common.evaluation.load_config. Spec: Hochsmann 2026 Supplementary Methods and Supplementary
+# Table 1, Equations 1-6. Deviations: methods/dassau/docs/deviations.md.
+
+[kalman.dassau]                      # shared by both detectors; none of this is stated by
+                                     # Hochsmann 2026, all defaults (deviations D6), fixed before
+                                     # any CGMacros run (2026-10-05)
+meas_sd_mg_dl = 3.0                  # measurement noise SD (mg/dL)
+jerk_psd = 2.0e-4                    # white-noise jerk PSD ((mg/dL)^2 / min^5): fastest value for
+                                     # which white sensor noise alone gives ROC SD <= 0.25 and
+                                     # acceleration SD <= 0.05 (1/4 of the lowest thresholds)
+p0_rate_sd = 1.0                     # initial state [g, 0, 0]; prior SD of rate (mg/dL/min)
+p0_acc_sd = 0.1                      # and of acceleration (mg/dL/min^2)
+warmup_min = 10                      # Kalman outputs unused for 10 min after each (re)start
+
+[methods.dassau_2of3]
+sampling_min = 1                     # QC'd 1-min series (plan 2.2; Hochsmann used 1 min)
+window_samples = 5                   # Eq. 5: samples i, ..., i+4
+
+[methods.dassau_2of3.grid]           # Supplementary Table 1 Eqs. 1, 2, 4; [start, stop, step]
+th_roc = [1.0, 3.0, 0.1]             # Threshold_ROC (mg/dL/min)
+th_acc = [0.2, 0.8, 0.1]             # Threshold_Acceleration (mg/dL/min^2)
+
+[methods.dassau_2of3.about]
+title = "Dassau 2-of-3"
+paper = "Dassau E, Bequette BW, Buckingham BA, Doyle FJ III. Detection of a meal using continuous glucose monitoring: implications for an artificial beta-cell. Diabetes Care 2008;31(2):295-300. https://doi.org/10.2337/dc07-1293 (not available to us; abstract only)."
+implementation = "As specified in the Hochsmann 2026 review (Supplementary Methods, Supplementary Table 1 Eqs. 1, 2, 4, 5). The review equations are the only spec."
+description = [
+  "Three indicators at each 1-min sample: BD (3-point backward-difference ROC of raw glucose > Threshold_ROC), BDK (the same on Kalman-filtered glucose) and ACC (Kalman acceleration > Threshold_Acceleration).",
+  "A meal flag at sample i needs at least two of the three indicators at every sample i, ..., i+4 (Eq. 5).",
+  "A detection is the first sample of each run of flags (rising edge), at time t(i).",
+  "The Kalman filter is a constant-acceleration model with default noise settings (deviations D6).",
+]
+grid_source = "Hochsmann 2026 Supplementary Table 1, Equations 1, 2 and 4 (Threshold_ROC and Threshold_Acceleration; the only thresholds Eq. 5 uses, see deviations D2)"
+param_labels = { th_roc = "Threshold_ROC (mg/dL/min)", th_acc = "Threshold_Acceleration (mg/dL/min^2)" }
+deviations = "methods/dassau/docs/deviations.md"
+
+[methods.dassau_2of3.about.hochsmann2026_table2]
+sensitivity_pct = 72.2
+fp_per_day = 0.60
+delay_mean_min = 37.6
+cohort = "16 healthy young adults, Libre 2 (1-min), 3 meals/day, afternoon detections suppressed, per-participant tuning"
+
+[methods.dassau_3of4]
+sampling_min = 1
+window_samples = 5                   # Eq. 6: samples i, ..., i+4
+
+[methods.dassau_3of4.grid]           # Supplementary Table 1 Eqs. 1-4; [start, stop, step]
+th_glucose = [100, 200, 10]          # Threshold_Glucose (mg/dL; the table prints mg/dL/min)
+th_max_roc = [2, 5, 1]               # Threshold_maxROC (mg/dL/min)
+th_roc = [1.0, 3.0, 0.1]             # Threshold_ROC (mg/dL/min)
+th_acc = [0.2, 0.8, 0.1]             # Threshold_Acceleration (mg/dL/min^2)
+
+[methods.dassau_3of4.about]
+title = "Dassau 3-of-4"
+paper = "Dassau E, Bequette BW, Buckingham BA, Doyle FJ III. Detection of a meal using continuous glucose monitoring: implications for an artificial beta-cell. Diabetes Care 2008;31(2):295-300. https://doi.org/10.2337/dc07-1293 (not available to us; abstract only)."
+implementation = "As specified in the Hochsmann 2026 review (Supplementary Methods, Supplementary Table 1 Eqs. 1-4, 6). The review equations are the only spec."
+description = [
+  "Four indicators at each 1-min sample: BD and BDK (3-point backward-difference ROC of raw and Kalman-filtered glucose > Threshold_ROC), KF (Kalman ROC between Threshold_ROC and Threshold_maxROC, and Kalman glucose > Threshold_Glucose) and ACC (Kalman acceleration > Threshold_Acceleration).",
+  "A meal flag at sample i needs at least three of the four indicators at every sample i, ..., i+4 (Eq. 6).",
+  "A detection is the first sample of each run of flags (rising edge), at time t(i).",
+  "The Kalman filter is a constant-acceleration model with default noise settings (deviations D6).",
+]
+grid_source = "Hochsmann 2026 Supplementary Table 1, Equations 1-4"
+param_labels = { th_glucose = "Threshold_Glucose (mg/dL)", th_max_roc = "Threshold_maxROC (mg/dL/min)", th_roc = "Threshold_ROC (mg/dL/min)", th_acc = "Threshold_Acceleration (mg/dL/min^2)" }
+deviations = "methods/dassau/docs/deviations.md"
+
+[methods.dassau_3of4.about.hochsmann2026_table2]
+sensitivity_pct = 49.1
+fp_per_day = 0.12
+delay_mean_min = 36.8
+cohort = "16 healthy young adults, Libre 2 (1-min), 3 meals/day, afternoon detections suppressed, per-participant tuning"

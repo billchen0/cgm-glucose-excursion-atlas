@@ -1,0 +1,13 @@
+{
+ "window": [
+  "04:43",
+  "17:31"
+ ],
+ "mask_before_min": 60,
+ "mask_after_min": 120,
+ "carve_out_min": [
+  -15,
+  120
+ ],
+ "n_raw_dinner_snack_rows": 835
+}

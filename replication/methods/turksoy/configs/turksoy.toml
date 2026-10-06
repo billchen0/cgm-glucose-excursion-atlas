@@ -1,0 +1,63 @@
+# Turksoy (UKF on a modified minimal model, R_a threshold) method settings. Merged over
+# common/configs/cgmacros_eval.toml by common.evaluation.load_config. Spec: Hochsmann 2026
+# Supplementary Methods and Supplementary Table 1 Eq. 16; model and UKF from Turksoy 2016
+# (published IEEE version, https://doi.org/10.1109/JBHI.2015.2446413).
+# Deviations: methods/turksoy/docs/deviations.md. All settings fixed before any CGMacros run (2026-10-05).
+
+[methods.turksoy]
+sampling_min = 1                     # QC'd 1-min series (plan 2.2; Turksoy and Hochsmann used 1 min)
+glucose_min = 100                    # Eq. 16: CGM > 100 mg/dL (T6)
+gb_window_min = 30                   # Eq. 8: l = 30 min
+gb_default = 100                     # Eq. 8: G_b = 100 mg/dL for the first 2l/h samples
+
+[methods.turksoy.ukf]                # Turksoy 2016 Eqs. 10-22 unless marked default
+alpha = 1.0                          # stated (Eq. 10 text)
+beta = 2.0                           # stated
+kappa = 0.0                          # stated
+# state order: I_eff, G_s, R_a, R_a(k-1), p1, p2, p4, tau
+x0 = [0.0, 0.0, 0.0, 0.0, 0.068, 0.037, 1.3, 20.0]   # stated (Eq. 22); G_s(0) = first CGM value
+qp = [1e-6, 1e-6, 1e-3, 1e-3, 1e-2, 1e-1, 1e-2, 1e-1]   # stated (Eq. 22), diagonal
+p0 = 1.0                             # stated: P(0) = I
+qm = 100.0                           # stated: measurement noise variance (mg/dL)^2
+# Trimming bounds for Eq. 12 (not stated; default T7): I_eff >= 0, G_s 20-600 mg/dL,
+# R_a 0-20 mg/dL/min, and p1, p2, p4, tau from x0/10 to 10 x0.
+lower = [0.0, 20.0, 0.0, 0.0, 0.0068, 0.0037, 0.13, 2.0]
+upper = [1.0, 600.0, 20.0, 20.0, 0.68, 0.37, 13.0, 200.0]
+eig_floor = 1e-9                     # default: eigenvalue floor that keeps P positive definite
+warmup_min = 120                     # default: outputs unused for 120 min after a (re)start (T8:
+                                     # the start-up transient of R_a lasts about 90 min)
+
+[methods.turksoy.grid]
+th_ra = [1.5, 2.5, 0.1]              # Threshold_Ra (mg/dL/min): range from Hochsmann line 144;
+                                     # step not stated, 0.1 is a default (T9)
+
+[methods.turksoy.about]
+title = "Turksoy UKF"
+paper = "Turksoy K, Samadi S, Feng J, Littlejohn E, Quinn L, Cinar A. Meal detection in patients with type 1 diabetes: a new module for the multivariable adaptive artificial pancreas control system. IEEE J Biomed Health Inform 2016;20(1):47-54. https://doi.org/10.1109/JBHI.2015.2446413"
+implementation = "Hochsmann 2026 review rule (Supplementary Table 1 Eq. 16), no post-detection threshold raising. Model and UKF settings from Turksoy 2016. CGM only: the model has no insulin input (Eq. 7 sets plasma insulin to zero)."
+description = [
+  "A modified Bergman minimal model with a two-compartment meal subsystem is run at 1-min sampling.",
+  "An unscented Kalman filter estimates eight states: effective insulin, glucose, the current and previous rate of glucose appearance R_a, and the parameters p1, p2, p4 and tau.",
+  "The model has no insulin input and no meal input. Meals enter through the process noise on R_a.",
+  "A meal flag is raised when the estimated R_a > Threshold_Ra and CGM > 100 mg/dL (Eq. 16). A detection is the first sample of each run of flags (rising edge).",
+  "Turksoy's noise settings and initial state are used. The parameter bounds for sigma-point trimming are defaults (deviations T7).",
+]
+grid_source = "Hochsmann 2026 Supplementary Methods line 144: Threshold_Ra over 1.5 to 2.5 mg/dL/min; step 0.1 is a default (not stated)"
+param_labels = { th_ra = "Threshold_Ra (mg/dL/min)" }
+deviations = "methods/turksoy/docs/deviations.md"
+
+[methods.turksoy.about.hochsmann2026_table1]   # tuned per participant, mean +/- SD
+th_ra = "1.56 +/- 0.09"
+f2 = "0.84 +/- 0.12"
+
+[methods.turksoy.about.hochsmann2026_table2]
+sensitivity_pct = 76.9
+fp_per_day = 0.22
+delay_mean_min = 40.7
+cohort = "16 healthy young adults, Libre 2 (1-min), 3 meals/day, afternoon detections suppressed, per-participant tuning"
+
+[methods.turksoy.about.original]
+note = "Hochsmann 2026 Supplementary Table 2, metrics from Kolle et al.; T1D, TP window -30 to 120 min, not like-for-like"
+sensitivity_pct = "97 / 64"
+fp_per_day = "1.28"
+delay_min = "32.7"

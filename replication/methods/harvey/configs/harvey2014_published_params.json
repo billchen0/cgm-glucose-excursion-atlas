@@ -1,0 +1,25 @@
+{
+ "_note": "Documentation only. Harvey 2014 published population parameters, used untuned as the Harvey2014_fixed route in methods/harvey/results/reference_tp_lockout/. Not a separate run. Values as in HARVEY_2014 and [methods.harvey] in methods/harvey/src/run_harvey.py and configs/harvey.toml.",
+ "source": "Harvey RA, Dassau E, Zisser H, Seborg DE, Doyle FJ III. Design of the glucose rate increase detector: a meal detection module for the health monitoring system. J Diabetes Sci Technol 2014;8(2):307-320. doi:10.1177/1932296814523881",
+ "params": {
+  "tau_F": 6.0,
+  "G_min": 130.0,
+  "Gp_min_3": 1.5,
+  "Gp_min_2": 1.6
+ },
+ "fixed": {
+  "spike_max_roc_mg_dl_per_min": 3.0
+ },
+ "units": {
+  "tau_F": "min (low-pass filter time constant)",
+  "G_min": "mg/dL (minimum filtered glucose)",
+  "Gp_min_3": "mg/dL/min (ROC threshold, 3 consecutive samples)",
+  "Gp_min_2": "mg/dL/min (ROC threshold, 2 consecutive samples)",
+  "spike_max_roc_mg_dl_per_min": "mg/dL/min (noise-spike filter)"
+ },
+ "location": {
+  "params": "Harvey 2014, p. 312, Results and Discussion > Training and Validation, first paragraph: 'the best set of tuning parameters for the GRID' (tuned on the 12-subject closed-loop training set, Dexcom SEVEN PLUS, 5-min sampling; p. 310 describes the tuning but omits the values)",
+  "spike_max_roc_mg_dl_per_min": "Harvey 2014, p. 308, Eq. 1: 'maximum allowable ROC, set to 3 mg/dL in a 1-minute period' (deviations.md H1)"
+ },
+ "verified_against_paper": "2026-09-29, Harvey et al. 2014, https://doi.org/10.1177/1932296814523881"
+}

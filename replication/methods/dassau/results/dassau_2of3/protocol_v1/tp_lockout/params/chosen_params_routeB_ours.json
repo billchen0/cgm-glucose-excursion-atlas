@@ -1,0 +1,177 @@
+{
+ "fold_0": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.2
+  },
+  "grid_edges": [
+   "th_roc",
+   "th_acc"
+  ],
+  "grid_edges_forced": [
+   "th_roc",
+   "th_acc"
+  ],
+  "val_F2": 0.7949944792050055,
+  "val_FP_per_day": 0.8160919540229885,
+  "val_delay_mean": 23.358796296296298,
+  "val_TP": 432,
+  "val_FP": 213,
+  "val_FN": 86,
+  "val_days": 261,
+  "n_tied": 1,
+  "test_participants": [
+   "CGMacros-001",
+   "CGMacros-005",
+   "CGMacros-014",
+   "CGMacros-018",
+   "CGMacros-021",
+   "CGMacros-023",
+   "CGMacros-028",
+   "CGMacros-044",
+   "CGMacros-045"
+  ]
+ },
+ "fold_1": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.4
+  },
+  "grid_edges": [
+   "th_roc"
+  ],
+  "grid_edges_forced": [
+   "th_roc"
+  ],
+  "val_F2": 0.8008100147275405,
+  "val_FP_per_day": 0.8007662835249042,
+  "val_delay_mean": 23.135632183908047,
+  "val_TP": 435,
+  "val_FP": 209,
+  "val_FN": 83,
+  "val_days": 261,
+  "n_tied": 1,
+  "test_participants": [
+   "CGMacros-002",
+   "CGMacros-008",
+   "CGMacros-009",
+   "CGMacros-027",
+   "CGMacros-035",
+   "CGMacros-038",
+   "CGMacros-039",
+   "CGMacros-043",
+   "CGMacros-048"
+  ]
+ },
+ "fold_2": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.4
+  },
+  "grid_edges": [
+   "th_roc"
+  ],
+  "grid_edges_forced": [
+   "th_roc"
+  ],
+  "val_F2": 0.8146567057986481,
+  "val_FP_per_day": 0.8246268656716418,
+  "val_delay_mean": 24.66593886462882,
+  "val_TP": 458,
+  "val_FP": 221,
+  "val_FN": 75,
+  "val_days": 268,
+  "n_tied": 1,
+  "test_participants": [
+   "CGMacros-003",
+   "CGMacros-004",
+   "CGMacros-010",
+   "CGMacros-015",
+   "CGMacros-029",
+   "CGMacros-034",
+   "CGMacros-046",
+   "CGMacros-049"
+  ]
+ },
+ "fold_3": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.4
+  },
+  "grid_edges": [
+   "th_roc"
+  ],
+  "grid_edges_forced": [
+   "th_roc"
+  ],
+  "val_F2": 0.7915472779369628,
+  "val_FP_per_day": 0.7955390334572491,
+  "val_delay_mean": 24.237556561085974,
+  "val_TP": 442,
+  "val_FP": 214,
+  "val_FN": 92,
+  "val_days": 269,
+  "n_tied": 1,
+  "test_participants": [
+   "CGMacros-006",
+   "CGMacros-012",
+   "CGMacros-013",
+   "CGMacros-017",
+   "CGMacros-022",
+   "CGMacros-030",
+   "CGMacros-031",
+   "CGMacros-036"
+  ]
+ },
+ "fold_4": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.4
+  },
+  "grid_edges": [
+   "th_roc"
+  ],
+  "grid_edges_forced": [
+   "th_roc"
+  ],
+  "val_F2": 0.8038294797687862,
+  "val_FP_per_day": 0.6505576208178439,
+  "val_delay_mean": 24.375280898876404,
+  "val_TP": 445,
+  "val_FP": 175,
+  "val_FN": 92,
+  "val_days": 269,
+  "n_tied": 5,
+  "test_participants": [
+   "CGMacros-011",
+   "CGMacros-019",
+   "CGMacros-020",
+   "CGMacros-032",
+   "CGMacros-033",
+   "CGMacros-041",
+   "CGMacros-042",
+   "CGMacros-047"
+  ]
+ },
+ "all_participants": {
+  "params": {
+   "th_roc": 1.0,
+   "th_acc": 0.4
+  },
+  "grid_edges": [
+   "th_roc"
+  ],
+  "grid_edges_forced": [
+   "th_roc"
+  ],
+  "val_F2": 0.8012170385395537,
+  "val_FP_per_day": 0.7771084337349398,
+  "val_delay_mean": 23.98372513562387,
+  "val_TP": 553,
+  "val_FP": 258,
+  "val_FN": 107,
+  "val_days": 332,
+  "n_tied": 1,
+  "note": "tuned on all 42 participants; candidate lock for AI-READI; no held-out score"
+ }
+}

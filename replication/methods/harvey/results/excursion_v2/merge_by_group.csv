@@ -1,0 +1,9 @@
+route,group,raw_detections,merged_pct,events,events_returned_pct,events_trough_pct,events_trough_interrupted_pct,events_censored_pct,events_no_rise_pct
+A,overall,937,20.5,745,62.0,11.7,5.9,20.4,0.0
+A,healthy,335,12.2,294,70.7,10.9,7.5,10.9,0.0
+A,prediabetes,289,19.0,234,62.0,12.0,6.8,19.2,0.0
+A,T2D,313,30.7,217,50.2,12.4,2.8,34.6,0.0
+B,overall,2224,23.9,1693,62.0,10.5,7.1,20.3,0.0
+B,healthy,755,16.3,632,70.4,10.9,7.1,11.6,0.0
+B,prediabetes,692,21.7,542,61.4,10.7,7.9,19.9,0.0
+B,T2D,777,33.2,519,52.4,9.8,6.4,31.4,0.0

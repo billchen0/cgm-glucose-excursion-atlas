@@ -1,0 +1,9 @@
+route,group,raw_detections,merged_pct,events,censored_pct,fallback_baseline_pct
+A,overall,967,26.6,710,32.1,0.0
+A,healthy,349,20.3,278,22.3,0.0
+A,prediabetes,300,26.3,221,31.2,0.0
+A,T2D,318,33.6,211,46.0,0.0
+B,overall,2229,29.8,1564,32.8,0.0
+B,healthy,760,23.4,582,23.9,0.0
+B,prediabetes,692,27.7,500,31.6,0.0
+B,T2D,777,38.0,482,44.8,0.0

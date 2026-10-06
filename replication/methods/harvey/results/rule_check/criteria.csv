@@ -1,0 +1,4 @@
+criterion,value,threshold,met
+C1,2.9 % split,>= 10.0 %,False
+C2,"range 5.2 pp (healthy 0.8, prediabetes 1.7, T2D 6.0)",>= 5.0 pp,True
+C3,"d_g healthy +32.5 %, prediabetes +20.7 %, T2D +9.4 %; max abs(d_g) 32.5; spread 23.1 pp",>= 10 % in a group AND (sign differs OR spread >= 5 pp),True

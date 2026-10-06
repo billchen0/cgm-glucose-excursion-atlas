@@ -1,0 +1,58 @@
+analysis,route,rule,group,reason,fn_meals
+main,A,excursion_end,T2D,excursion_end: removed while the anchor's excursion was ongoing,3
+main,A,excursion_end,T2D,no removed detection in TP window,24
+main,A,excursion_end,healthy,excursion_end: removed while the anchor's excursion was ongoing,2
+main,A,excursion_end,healthy,no removed detection in TP window,36
+main,A,excursion_end,prediabetes,no removed detection in TP window,27
+main,A,refractory,T2D,no removed detection in TP window,23
+main,A,refractory,T2D,refractory: removed after the blocking excursion had ended,2
+main,A,refractory,T2D,refractory: removed while the blocking excursion was ongoing,3
+main,A,refractory,healthy,no removed detection in TP window,37
+main,A,refractory,healthy,refractory: removed after the blocking excursion had ended,6
+main,A,refractory,healthy,refractory: removed while the blocking excursion was ongoing,3
+main,A,refractory,prediabetes,no removed detection in TP window,23
+main,A,refractory,prediabetes,refractory: removed after the blocking excursion had ended,3
+main,A,refractory,prediabetes,refractory: removed while the blocking excursion was ongoing,1
+main,B,excursion_end,T2D,excursion_end: removed while the anchor's excursion was ongoing,5
+main,B,excursion_end,T2D,no removed detection in TP window,37
+main,B,excursion_end,healthy,excursion_end: removed while the anchor's excursion was ongoing,6
+main,B,excursion_end,healthy,no removed detection in TP window,55
+main,B,excursion_end,prediabetes,excursion_end: removed while the anchor's excursion was ongoing,1
+main,B,excursion_end,prediabetes,no removed detection in TP window,45
+main,B,refractory,T2D,no removed detection in TP window,38
+main,B,refractory,T2D,refractory: removed after the blocking excursion had ended,7
+main,B,refractory,T2D,refractory: removed while the blocking excursion was ongoing,5
+main,B,refractory,healthy,no removed detection in TP window,56
+main,B,refractory,healthy,refractory: removed after the blocking excursion had ended,13
+main,B,refractory,healthy,refractory: removed while the blocking excursion was ongoing,2
+main,B,refractory,prediabetes,no removed detection in TP window,45
+main,B,refractory,prediabetes,refractory: removed after the blocking excursion had ended,7
+main,B,refractory,prediabetes,refractory: removed while the blocking excursion was ongoing,1
+same_raw,A,excursion_end,T2D,excursion_end: removed while the anchor's excursion was ongoing,3
+same_raw,A,excursion_end,T2D,no removed detection in TP window,24
+same_raw,A,excursion_end,healthy,excursion_end: removed while the anchor's excursion was ongoing,2
+same_raw,A,excursion_end,healthy,no removed detection in TP window,36
+same_raw,A,excursion_end,prediabetes,no removed detection in TP window,27
+same_raw,A,refractory,T2D,no removed detection in TP window,24
+same_raw,A,refractory,T2D,refractory: removed after the blocking excursion had ended,4
+same_raw,A,refractory,T2D,refractory: removed while the blocking excursion was ongoing,4
+same_raw,A,refractory,healthy,no removed detection in TP window,36
+same_raw,A,refractory,healthy,refractory: removed after the blocking excursion had ended,4
+same_raw,A,refractory,healthy,refractory: removed while the blocking excursion was ongoing,2
+same_raw,A,refractory,prediabetes,no removed detection in TP window,27
+same_raw,A,refractory,prediabetes,refractory: removed after the blocking excursion had ended,1
+same_raw,B,excursion_end,T2D,excursion_end: removed while the anchor's excursion was ongoing,5
+same_raw,B,excursion_end,T2D,no removed detection in TP window,37
+same_raw,B,excursion_end,healthy,excursion_end: removed while the anchor's excursion was ongoing,6
+same_raw,B,excursion_end,healthy,no removed detection in TP window,55
+same_raw,B,excursion_end,prediabetes,excursion_end: removed while the anchor's excursion was ongoing,1
+same_raw,B,excursion_end,prediabetes,no removed detection in TP window,45
+same_raw,B,refractory,T2D,no removed detection in TP window,38
+same_raw,B,refractory,T2D,refractory: removed after the blocking excursion had ended,7
+same_raw,B,refractory,T2D,refractory: removed while the blocking excursion was ongoing,5
+same_raw,B,refractory,healthy,no removed detection in TP window,55
+same_raw,B,refractory,healthy,refractory: removed after the blocking excursion had ended,14
+same_raw,B,refractory,healthy,refractory: removed while the blocking excursion was ongoing,2
+same_raw,B,refractory,prediabetes,no removed detection in TP window,45
+same_raw,B,refractory,prediabetes,refractory: removed after the blocking excursion had ended,6
+same_raw,B,refractory,prediabetes,refractory: removed while the blocking excursion was ongoing,1

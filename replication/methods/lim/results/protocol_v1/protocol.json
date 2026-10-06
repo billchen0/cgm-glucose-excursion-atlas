@@ -1,0 +1,26 @@
+{
+ "method": "lim",
+ "title": "Lim wavelet PPGR",
+ "date": "2026-10-06",
+ "results_dir": "protocol_v1",
+ "main_rule": "refractory",
+ "adjacent_rules": [
+  "refractory",
+  "tp_lockout"
+ ],
+ "routes": [
+  "B"
+ ],
+ "matching_rule": "ours",
+ "extra_matching_rules": {
+  "tp_lockout": [
+   "review"
+  ]
+ },
+ "segmentation": "excursion",
+ "comparison_note": "Lim is window-limited (one detection per breakfast and lunch window, at most 2 per day), so its FP/day is not comparable with the all-day detectors.",
+ "configs": [
+  "common/configs/cgmacros_eval.toml",
+  "methods/lim/configs/lim.toml"
+ ]
+}

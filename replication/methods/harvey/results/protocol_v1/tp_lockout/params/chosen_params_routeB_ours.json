@@ -1,0 +1,217 @@
+{
+ "fold_0": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8027956176803929,
+  "val_FP_per_day": 0.5747126436781609,
+  "val_delay_mean": 29.80470588235294,
+  "val_TP": 425,
+  "val_FP": 150,
+  "val_FN": 93,
+  "val_days": 261,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-001",
+   "CGMacros-005",
+   "CGMacros-014",
+   "CGMacros-018",
+   "CGMacros-021",
+   "CGMacros-023",
+   "CGMacros-028",
+   "CGMacros-044",
+   "CGMacros-045"
+  ]
+ },
+ "fold_1": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7974300831443688,
+  "val_FP_per_day": 0.5823754789272031,
+  "val_delay_mean": 30.144549763033176,
+  "val_TP": 422,
+  "val_FP": 152,
+  "val_FN": 96,
+  "val_days": 261,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-002",
+   "CGMacros-008",
+   "CGMacros-009",
+   "CGMacros-027",
+   "CGMacros-035",
+   "CGMacros-038",
+   "CGMacros-039",
+   "CGMacros-043",
+   "CGMacros-048"
+  ]
+ },
+ "fold_2": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.818081991215227,
+  "val_FP_per_day": 0.5708955223880597,
+  "val_delay_mean": 32.069351230425056,
+  "val_TP": 447,
+  "val_FP": 153,
+  "val_FN": 86,
+  "val_days": 268,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-003",
+   "CGMacros-004",
+   "CGMacros-010",
+   "CGMacros-015",
+   "CGMacros-029",
+   "CGMacros-034",
+   "CGMacros-046",
+   "CGMacros-049"
+  ]
+ },
+ "fold_3": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7984581497797357,
+  "val_FP_per_day": 0.5687732342007435,
+  "val_delay_mean": 31.232183908045975,
+  "val_TP": 435,
+  "val_FP": 153,
+  "val_FN": 99,
+  "val_days": 269,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-006",
+   "CGMacros-012",
+   "CGMacros-013",
+   "CGMacros-017",
+   "CGMacros-022",
+   "CGMacros-030",
+   "CGMacros-031",
+   "CGMacros-036"
+  ]
+ },
+ "fold_4": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8108607314370151,
+  "val_FP_per_day": 0.44609665427509293,
+  "val_delay_mean": 31.842824601366743,
+  "val_TP": 439,
+  "val_FP": 120,
+  "val_FN": 98,
+  "val_days": 269,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-011",
+   "CGMacros-019",
+   "CGMacros-020",
+   "CGMacros-032",
+   "CGMacros-033",
+   "CGMacros-041",
+   "CGMacros-042",
+   "CGMacros-047"
+  ]
+ },
+ "all_participants": {
+  "params": {
+   "tau_F": 4.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "tau_F",
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "tau_F",
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.8055885850178359,
+  "val_FP_per_day": 0.5481927710843374,
+  "val_delay_mean": 31.03690036900369,
+  "val_TP": 542,
+  "val_FP": 182,
+  "val_FN": 118,
+  "val_days": 332,
+  "n_tied": 11,
+  "note": "tuned on all 42 participants; candidate lock for AI-READI; no held-out score"
+ }
+}

@@ -1,0 +1,9 @@
+rule,stratum,participants,days,scored_days,meals,meals_scored,routeA_validation_days,routeA_test_days
+ours,overall,42,333,332,666,660,165,168
+ours,healthy,15,119,119,238,237,59,60
+ours,prediabetes,13,104,103,208,203,52,52
+ours,T2D,14,110,110,220,220,54,56
+review,overall,42,333,332,666,660,165,168
+review,healthy,15,119,119,238,237,59,60
+review,prediabetes,13,104,103,208,203,52,52
+review,T2D,14,110,110,220,220,54,56
