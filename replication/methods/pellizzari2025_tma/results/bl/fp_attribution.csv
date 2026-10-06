@@ -1,0 +1,5 @@
+config,version,FP,near_logged_dinner_snack,0_60min_before_logged_BL,120_240min_after_logged_BL,other
+bl,persTMA,178,36,63,42,37
+bl,popTMA,233,49,112,38,34
+rescore,persTMA,192,44,77,32,39
+rescore,popTMA,244,47,122,39,36

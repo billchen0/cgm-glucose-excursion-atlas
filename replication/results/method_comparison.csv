@@ -1,0 +1,9 @@
+method,title,date,rule,note,route,participants,days,sensitivity,precision,F2,FP_per_day,delay_median,sens_range_pp,recovery_time_ICC,recovery_time_n,readme
+dassau_2of3,Dassau 2-of-3,2026-10-05,refractory,,B,42,332,0.7439,0.7242,0.7399,0.5633,20.0,5.54,0.7001,479,methods/dassau/results/dassau_2of3/protocol_v1/README.md
+dassau_3of4,Dassau 3-of-4,2026-10-05,refractory,,B,42,332,0.7167,0.8269,0.7363,0.2982,24.0,8.85,0.7042,466,methods/dassau/results/dassau_3of4/protocol_v1/README.md
+faccioli,Faccioli STMD,2026-10-05,refractory,,B,42,332,0.7773,0.6914,0.7584,0.6898,30.0,6.65,0.7104,496,methods/faccioli/results/protocol_v1/README.md
+harvey,Harvey GRID,2026-10-05,refractory,,B,42,332,0.7364,0.8046,0.7491,0.3554,29.0,7.23,0.72,478,methods/harvey/results/protocol_v1/README.md
+lim,Lim wavelet PPGR,2026-10-06,refractory,"Lim is window-limited (one detection per breakfast and lunch window, at most 2 per day), so its FP/day is not comparable with the all-day detectors.",B,42,332,0.6788,0.8924,0.7129,0.1627,25.0,1.2,0.6736,447,methods/lim/results/protocol_v1/README.md
+popp,Popp SBE,2026-10-05,refractory,,B,42,332,0.6379,0.6982,0.6491,0.5482,43.0,32.24,0.6133,415,methods/popp/results/protocol_v1/README.md
+samadi,Samadi IGT,2026-10-05,refractory,,B,42,332,0.8742,0.5591,0.7857,1.3705,25.0,6.21,0.663,537,methods/samadi/results/protocol_v1/README.md
+turksoy,Turksoy UKF,2026-10-05,refractory,,B,42,332,0.5348,0.8914,0.5814,0.1295,38.0,8.62,0.7008,353,methods/turksoy/results/protocol_v1/README.md

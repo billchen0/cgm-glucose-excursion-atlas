@@ -1,0 +1,203 @@
+{
+ "fold_0": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7531298904538342,
+  "val_FP_per_day": 0.3793103448275862,
+  "val_delay_mean": 34.11168831168831,
+  "val_TP": 385,
+  "val_FP": 99,
+  "val_FN": 133,
+  "val_days": 261,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-001",
+   "CGMacros-005",
+   "CGMacros-014",
+   "CGMacros-018",
+   "CGMacros-021",
+   "CGMacros-023",
+   "CGMacros-028",
+   "CGMacros-044",
+   "CGMacros-045"
+  ]
+ },
+ "fold_1": {
+  "params": {
+   "tau_F": 7.0,
+   "G_min": 105.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7522646711303663,
+  "val_FP_per_day": 0.32567049808429116,
+  "val_delay_mean": 36.1282722513089,
+  "val_TP": 382,
+  "val_FP": 85,
+  "val_FN": 136,
+  "val_days": 261,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-002",
+   "CGMacros-008",
+   "CGMacros-009",
+   "CGMacros-027",
+   "CGMacros-035",
+   "CGMacros-038",
+   "CGMacros-039",
+   "CGMacros-043",
+   "CGMacros-048"
+  ]
+ },
+ "fold_2": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.77882797731569,
+  "val_FP_per_day": 0.376865671641791,
+  "val_delay_mean": 36.44174757281554,
+  "val_TP": 412,
+  "val_FP": 101,
+  "val_FN": 121,
+  "val_days": 268,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-003",
+   "CGMacros-004",
+   "CGMacros-010",
+   "CGMacros-015",
+   "CGMacros-029",
+   "CGMacros-034",
+   "CGMacros-046",
+   "CGMacros-049"
+  ]
+ },
+ "fold_3": {
+  "params": {
+   "tau_F": 6.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7488567073170732,
+  "val_FP_per_day": 0.35315985130111527,
+  "val_delay_mean": 35.67175572519084,
+  "val_TP": 393,
+  "val_FP": 95,
+  "val_FN": 141,
+  "val_days": 269,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-006",
+   "CGMacros-012",
+   "CGMacros-013",
+   "CGMacros-017",
+   "CGMacros-022",
+   "CGMacros-030",
+   "CGMacros-031",
+   "CGMacros-036"
+  ]
+ },
+ "fold_4": {
+  "params": {
+   "tau_F": 6.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7680608365019012,
+  "val_FP_per_day": 0.2899628252788104,
+  "val_delay_mean": 35.28712871287129,
+  "val_TP": 404,
+  "val_FP": 78,
+  "val_FN": 133,
+  "val_days": 269,
+  "n_tied": 11,
+  "test_participants": [
+   "CGMacros-011",
+   "CGMacros-019",
+   "CGMacros-020",
+   "CGMacros-032",
+   "CGMacros-033",
+   "CGMacros-041",
+   "CGMacros-042",
+   "CGMacros-047"
+  ]
+ },
+ "all_participants": {
+  "params": {
+   "tau_F": 5.0,
+   "G_min": 100.0,
+   "Gp_min_3": 0.8,
+   "Gp_min_2": 0.8
+  },
+  "grid_edges": [
+   "G_min",
+   "Gp_min_3",
+   "Gp_min_2"
+  ],
+  "grid_edges_forced": [
+   "G_min",
+   "Gp_min_2"
+  ],
+  "val_F2": 0.7596685082872928,
+  "val_FP_per_day": 0.3704819277108434,
+  "val_delay_mean": 35.07070707070707,
+  "val_TP": 495,
+  "val_FP": 123,
+  "val_FN": 165,
+  "val_days": 332,
+  "n_tied": 11,
+  "note": "tuned on all 42 participants; candidate lock for AI-READI; no held-out score"
+ }
+}

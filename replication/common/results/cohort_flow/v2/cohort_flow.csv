@@ -1,0 +1,45 @@
+group,step,participants,participants_removed,days,days_removed,bl_meals,bl_meals_removed
+overall,0 Screened (all Dexcom data),45,,502,,852,
+overall,1 Remove first 24 h after sensor insertion,45,0,457,45,770,82
+overall,2 Split into calendar days,45,0,457,0,770,0
+overall,3 Remove days with a gap > 120 min,45,0,356,101,704,66
+overall,   3a of which partial first/last day,,,,89,,61
+overall,   3b of which internal sensor gap,,,,12,,5
+overall,4 Remove days without both breakfast and lunch,45,0,347,9,694,10
+overall,5 Minimum valid days >= 3 [Decide from data],45,0,347,0,694,0
+overall,5 Minimum valid days >= 5 [Decide from data],44,1,344,3,688,6
+overall,5 Minimum valid days >= 7 [Decide from data],42,3,334,13,668,26
+overall,5 Minimum valid days >= 9 [Decide from data],0,45,0,347,0,694
+healthy,0 Screened (all Dexcom data),15,,174,,287,
+healthy,1 Remove first 24 h after sensor insertion,15,0,159,15,260,27
+healthy,2 Split into calendar days,15,0,159,0,260,0
+healthy,3 Remove days with a gap > 120 min,15,0,120,39,240,20
+healthy,   3a of which partial first/last day,,,,29,,18
+healthy,   3b of which internal sensor gap,,,,10,,2
+healthy,4 Remove days without both breakfast and lunch,15,0,120,0,240,0
+healthy,5 Minimum valid days >= 3 [Decide from data],15,0,120,0,240,0
+healthy,5 Minimum valid days >= 5 [Decide from data],15,0,120,0,240,0
+healthy,5 Minimum valid days >= 7 [Decide from data],15,0,120,0,240,0
+healthy,5 Minimum valid days >= 9 [Decide from data],0,15,0,120,0,240
+prediabetes,0 Screened (all Dexcom data),16,,174,,298,
+prediabetes,1 Remove first 24 h after sensor insertion,16,0,158,16,269,29
+prediabetes,2 Split into calendar days,16,0,158,0,269,0
+prediabetes,3 Remove days with a gap > 120 min,16,0,124,34,242,27
+prediabetes,   3a of which partial first/last day,,,,32,,24
+prediabetes,   3b of which internal sensor gap,,,,2,,3
+prediabetes,4 Remove days without both breakfast and lunch,16,0,117,7,234,8
+prediabetes,5 Minimum valid days >= 3 [Decide from data],16,0,117,0,234,0
+prediabetes,5 Minimum valid days >= 5 [Decide from data],15,1,114,3,228,6
+prediabetes,5 Minimum valid days >= 7 [Decide from data],13,3,104,13,208,26
+prediabetes,5 Minimum valid days >= 9 [Decide from data],0,16,0,117,0,234
+T2D,0 Screened (all Dexcom data),14,,154,,267,
+T2D,1 Remove first 24 h after sensor insertion,14,0,140,14,241,26
+T2D,2 Split into calendar days,14,0,140,0,241,0
+T2D,3 Remove days with a gap > 120 min,14,0,112,28,222,19
+T2D,   3a of which partial first/last day,,,,28,,19
+T2D,   3b of which internal sensor gap,,,,0,,0
+T2D,4 Remove days without both breakfast and lunch,14,0,110,2,220,2
+T2D,5 Minimum valid days >= 3 [Decide from data],14,0,110,0,220,0
+T2D,5 Minimum valid days >= 5 [Decide from data],14,0,110,0,220,0
+T2D,5 Minimum valid days >= 7 [Decide from data],14,0,110,0,220,0
+T2D,5 Minimum valid days >= 9 [Decide from data],0,14,0,110,0,220

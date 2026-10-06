@@ -1,0 +1,9 @@
+version,config,FP,near_logged_dinner_snack,0_60min_before_logged_BL,120_240min_after_logged_BL,other,near_logged_dinner_snack_pct,0_60min_before_logged_BL_pct,120_240min_after_logged_BL_pct,other_pct
+persTMA,mask,129,0,63,34,32,0.0,48.8,26.4,24.8
+persTMA,mask_nocarve,129,0,63,34,32,0.0,48.8,26.4,24.8
+persTMA,mask_retuned,141,0,71,35,35,0.0,50.4,24.8,24.8
+persTMA,window,178,36,63,42,37,20.2,35.4,23.6,20.8
+popTMA,mask,166,1,111,28,26,0.6,66.9,16.9,15.7
+popTMA,mask_nocarve,164,0,110,28,26,0.0,67.1,17.1,15.9
+popTMA,mask_retuned,174,1,116,31,26,0.6,66.7,17.8,14.9
+popTMA,window,233,50,111,38,34,21.5,47.6,16.3,14.6

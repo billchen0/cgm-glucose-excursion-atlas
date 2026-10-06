@@ -1,0 +1,7 @@
+rule,route,adjacent_rule,stratum,participants,days,scored_hours,lockout_ignored,TP,FP,FN,sensitivity,precision,F2,FP_per_day,FP_per_hour,delay_median,delay_mean,sensitivity_lo,sensitivity_hi,precision_lo,precision_hi,F2_lo,F2_hi,FP_per_day_lo,FP_per_day_hi,FP_per_hour_lo,FP_per_hour_hi,delay_median_lo,delay_median_hi,delay_mean_lo,delay_mean_hi,n_delay_zero
+ours,B,meal_window_max_peak,overall,42,332,2904.3,0.0,441,72.0,219,0.6682,0.8596,0.6993,0.2169,0.0248,28.0,33.517,0.6212,0.7104,0.818,0.8986,0.6558,0.7391,0.1532,0.287,0.0177,0.0326,26.0,31.0,28.9466,38.8684,1.0
+ours,B,meal_window_max_peak,healthy,15,119,1089.8,0.0,157,28.0,80,0.6624,0.8486,0.6929,0.2353,0.0257,26.0,29.3822,0.5917,0.7373,0.773,0.9177,0.6244,0.7626,0.1176,0.3729,0.0129,0.0405,24.5,29.0125,24.4931,34.166,
+ours,B,meal_window_max_peak,prediabetes,13,103,850.4,0.0,137,15.0,66,0.6749,0.9013,0.7106,0.1456,0.0176,32.0,41.2117,0.5813,0.75,0.8403,0.9539,0.6243,0.7806,0.0673,0.2404,0.0082,0.0286,27.0,46.0,30.7595,54.604,
+ours,B,meal_window_max_peak,T2D,14,110,964.1,0.0,147,29.0,73,0.6682,0.8352,0.696,0.2636,0.0301,26.0,30.7619,0.5917,0.7409,0.7556,0.9059,0.625,0.7657,0.1454,0.4074,0.0169,0.045,20.0,31.0,24.5434,39.2687,
+ours,B,meal_window_max_peak,breakfast,42,332,,,250,,78,0.7622,,,,,24.0,29.292,0.6858,0.8308,,,,,,,,,22.0,26.0,24.5861,34.5585,
+ours,B,meal_window_max_peak,lunch,42,332,,,191,,141,0.5753,,,,,35.0,39.0471,0.5181,0.631,,,,,,,,,33.0,39.0,33.0402,45.5564,

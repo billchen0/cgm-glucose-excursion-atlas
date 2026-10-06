@@ -1,0 +1,48 @@
+# Popp (simulation-based meal detection, SBE) method settings. Merged over
+# common/configs/cgmacros_eval.toml by common.evaluation.load_config. Spec: Hochsmann 2026
+# Supplementary Methods and Supplementary Table 1 Eqs. 11-13; Popp 2024; SBE details from
+# Zheng 2019. Deviations: methods/popp/docs/deviations.md.
+# All settings below were fixed before any CGMacros run (2026-10-05).
+
+[methods.popp]
+sampling_min = 1                     # QC'd 1-min series (plan 2.2; Hochsmann used 1 min)
+zeta_min = 30                        # Eq. 11 window, fixed (Hochsmann)
+loads_g = [25, 50, 75, 100]          # Hochsmann: discrete carbohydrate loads
+meal_duration_min = 90               # Hochsmann: 90-min meal duration (constant ingestion, Zheng Eq. 8)
+model = "Dalla Man 2007 meal model, normal subject, BioModels BIOMD0000000379"   # parameters in src/popp.py (DM)
+
+[methods.popp.grid]                  # Hochsmann Supplementary Methods line 117, global
+phi_pct = { values = [10, 12] }      # phi in percent: Div is a fraction, so 10 % = 0.10 (Table 1 prints 0.10)
+tau_min = [20, 60, 10]               # back-search (min)
+eps = [14, 18, 1]                    # fit error threshold (mg/dL)
+
+[methods.popp.about]
+title = "Popp SBE"
+paper = "Popp CJ et al. Objective determination of eating occasion timing: combining self-report, wrist motion, and continuous glucose monitoring to detect eating occasions in adults with prediabetes and obesity. J Diabetes Sci Technol 2024;18(2):266-272. https://doi.org/10.1177/19322968231197205. SBE method: Zheng M, Ni B, Kleinberg S. JAMIA 2019;26(12):1592-1599. https://doi.org/10.1093/jamia/ocz159."
+implementation = "Hochsmann 2026 review rule (Supplementary Table 1 Eqs. 11-13). Glucose model: Dalla Man 2007 meal model, normal-subject population parameters (curated BioModels SBML BIOMD0000000379), endogenous insulin only. Anchoring of the simulation is a default (deviations P5)."
+description = [
+  "The Dalla Man 2007 model predicts glucose without a meal, starting from its basal steady state at the observed glucose of an anchor sample.",
+  "Div is the mean relative error between observed and predicted glucose over 30 min (Eq. 11). A candidate is a sample with Div > phi.",
+  "The meal start m_st is the earliest sample within tau min from which glucose stays above the prediction (back-search).",
+  "Meals of 25, 50, 75 and 100 g, eaten over 90 min from m_st, are simulated. A meal flag is raised when the RMS fit error of any load over [m_st, i] is below epsilon (Eqs. 12-13).",
+  "A detection is the first sample of each run of flags (rising edge), at time i. m_st is kept as the excursion start.",
+]
+grid_source = "Hochsmann 2026 Supplementary Methods line 117 (global): zeta = 30 min, phi in {10, 12}, tau in {20, 30, 40, 50, 60} min, epsilon in {14, 15, 16, 17, 18}"
+param_labels = { phi_pct = "phi (%)", tau_min = "tau (min)", eps = "epsilon (mg/dL)" }
+deviations = "methods/popp/docs/deviations.md"
+
+[methods.popp.about.hochsmann2026_table1]   # one global set
+phi_pct = "10 (printed as 0.10)"
+tau_min = "20"
+eps = "18"
+f2 = "0.81 (global, no SD)"
+
+[methods.popp.about.hochsmann2026_table2]
+sensitivity_pct = 82.9
+fp_per_day = 1.28
+delay_mean_min = 60.5
+cohort = "16 healthy young adults, Libre 2 (1-min), 3 meals/day, afternoon detections suppressed, global tuning"
+
+[methods.popp.about.original]
+note = "Popp 2024 compared eating-occasion timing across methods; it did not report sensitivity, FP/day or delay"
+reported = "not reported"

@@ -1,0 +1,7 @@
+rule,route,adjacent_rule,stratum,participants,days,scored_hours,lockout_ignored,TP,FP,FN,sensitivity,precision,F2,FP_per_day,FP_per_hour,delay_median,delay_mean,sensitivity_lo,sensitivity_hi,precision_lo,precision_hi,F2_lo,F2_hi,FP_per_day_lo,FP_per_day_hi,FP_per_hour_lo,FP_per_hour_hi,delay_median_lo,delay_median_hi,delay_mean_lo,delay_mean_hi,n_delay_zero
+ours,B,refractory,overall,42,332,2904.3,0.0,134,17.0,526,0.203,0.8874,0.2401,0.0512,0.0059,34.0,39.7836,0.1616,0.2436,0.7924,0.9667,0.1931,0.2855,0.015,0.1031,0.0017,0.0118,28.0,37.0,33.9396,46.2577,1.0
+ours,B,refractory,healthy,15,119,1089.8,0.0,29,10.0,208,0.1224,0.7436,0.1469,0.084,0.0092,29.0,41.3793,0.0638,0.1814,0.4865,1.0,0.0781,0.2148,0.0,0.2269,0.0,0.0249,24.0,44.0,28.7825,55.2694,
+ours,B,refractory,prediabetes,13,103,850.4,0.0,41,1.0,162,0.202,0.9762,0.24,0.0097,0.0012,39.0,44.3415,0.1366,0.2621,0.9348,1.0,0.1651,0.3075,0.0,0.0291,0.0,0.0036,28.0,60.0,32.342,60.4354,
+ours,B,refractory,T2D,14,110,964.1,0.0,64,6.0,156,0.2909,0.9143,0.3368,0.0545,0.0062,33.0,36.1406,0.2364,0.3472,0.8421,0.9726,0.2769,0.3981,0.018,0.1,0.0021,0.0111,25.0,37.0,30.4085,44.3793,
+ours,B,refractory,breakfast,42,332,,,84,,244,0.2561,,,,,28.0,38.0952,0.1939,0.3223,,,,,,,,,25.0,36.0,31.1017,46.6819,
+ours,B,refractory,lunch,42,332,,,50,,282,0.1506,,,,,39.0,42.62,0.1088,0.1916,,,,,,,,,34.5,48.0,34.0,51.5918,

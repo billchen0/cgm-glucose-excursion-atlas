@@ -1,0 +1,39 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# data and large outputs (harvey-replication)
+CGMacros*/
+*.npz
+*.pkl
+*.parquet
+**/results/*/cache/
+# row-level Harvey outputs (regenerate with methods/harvey/src/run_harvey*.py)
+methods/harvey/results/reference_tp_lockout/detections.csv
+methods/harvey/results/reference_tp_lockout/meals.csv
+methods/harvey/results/reference_tp_lockout/recovery_features.csv
+methods/harvey/results/peak_rules/*/detections.csv
+methods/harvey/results/peak_rules/*/meals.csv
+methods/harvey/results/peak_rules/*/recovery_features.csv
+
+# standard-format exports for the dashboard (rebuild with the export_standard.py scripts)
+methods/*/results/standard/
+methods/harvey/results/excursion_v2/*/detections.csv
+methods/harvey/results/excursion_v2/*/meals.csv
+methods/harvey/results/excursion_v2/*/recovery_features.csv
+
+# standard protocol runs (common/run_protocol.py): row-level tables and dashboard exports
+methods/*/results/protocol_v*/*/detections.csv
+methods/*/results/protocol_v*/*/meals.csv
+methods/*/results/protocol_v*/*/recovery_features.csv
+methods/*/results/protocol_v*/standard/
+methods/*/results/*/protocol_v*/*/detections.csv
+methods/*/results/*/protocol_v*/*/meals.csv
+methods/*/results/*/protocol_v*/*/recovery_features.csv
+methods/*/results/*/protocol_v*/standard/
+
+# row-level tables kept locally only (event-level timestamps), 2026-10-06
+methods/pellizzari2025_tma/results/bl_maskDS/detections.csv
+methods/pellizzari2025_tma/results/diagnostics/detections_train.csv
+common/results/cohort_flow/gap_list.csv
+common/results/cohort_flow/v2/gap_list.csv

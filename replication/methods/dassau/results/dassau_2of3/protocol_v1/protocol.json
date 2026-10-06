@@ -1,0 +1,25 @@
+{
+ "method": "dassau_2of3",
+ "title": "Dassau 2-of-3",
+ "date": "2026-10-05",
+ "results_dir": "protocol_v1",
+ "main_rule": "refractory",
+ "adjacent_rules": [
+  "refractory",
+  "tp_lockout"
+ ],
+ "routes": [
+  "B"
+ ],
+ "matching_rule": "ours",
+ "extra_matching_rules": {
+  "tp_lockout": [
+   "review"
+  ]
+ },
+ "segmentation": "excursion",
+ "configs": [
+  "common/configs/cgmacros_eval.toml",
+  "methods/dassau/configs/dassau.toml"
+ ]
+}

@@ -1,0 +1,7 @@
+rule,route,adjacent_rule,stratum,participants,days,scored_hours,lockout_ignored,TP,FP,FN,sensitivity,precision,F2,FP_per_day,FP_per_hour,delay_median,delay_mean,sensitivity_lo,sensitivity_hi,precision_lo,precision_hi,F2_lo,F2_hi,FP_per_day_lo,FP_per_day_hi,FP_per_hour_lo,FP_per_hour_hi,delay_median_lo,delay_median_hi,delay_mean_lo,delay_mean_hi,n_delay_zero
+ours,B,baseline_return,overall,42,332,2904.3,0.0,500,168.0,160,0.7576,0.7485,0.7557,0.506,0.0578,28.0,33.874,0.7206,0.7901,0.6962,0.8023,0.7238,0.7856,0.3724,0.6538,0.0427,0.0743,26.0,30.0,29.5589,38.8245,1.0
+ours,B,baseline_return,healthy,15,119,1089.8,0.0,173,78.0,64,0.73,0.6892,0.7214,0.6555,0.0716,26.0,30.9306,0.678,0.7872,0.595,0.7915,0.6744,0.7692,0.3865,1.0,0.042,0.1103,24.0,30.0,27.6315,34.191,
+ours,B,baseline_return,prediabetes,13,103,850.4,0.0,156,41.0,47,0.7685,0.7919,0.773,0.3981,0.0482,30.0,37.8718,0.6748,0.8366,0.7014,0.8834,0.6949,0.8301,0.198,0.6471,0.0243,0.0777,27.0,41.0,28.3289,50.6984,
+ours,B,baseline_return,T2D,14,110,964.1,0.0,171,49.0,49,0.7773,0.7773,0.7773,0.4455,0.0508,27.0,33.2047,0.7385,0.8119,0.6936,0.8528,0.7367,0.8135,0.2703,0.6727,0.0312,0.0753,22.0,32.0,25.9587,42.8671,
+ours,B,baseline_return,breakfast,42,332,,,272,,56,0.8293,,,,,23.0,28.9449,0.7606,0.8889,,,,,,,,,21.0,24.5125,24.2622,34.2915,
+ours,B,baseline_return,lunch,42,332,,,228,,104,0.6867,,,,,35.0,39.7544,0.6366,0.7349,,,,,,,,,33.0,38.0,34.9814,45.3003,

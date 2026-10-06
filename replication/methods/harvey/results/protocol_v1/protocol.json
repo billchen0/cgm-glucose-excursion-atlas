@@ -1,0 +1,25 @@
+{
+ "method": "harvey",
+ "title": "Harvey GRID",
+ "date": "2026-10-05",
+ "results_dir": "protocol_v1",
+ "main_rule": "refractory",
+ "adjacent_rules": [
+  "refractory",
+  "tp_lockout"
+ ],
+ "routes": [
+  "B"
+ ],
+ "matching_rule": "ours",
+ "extra_matching_rules": {
+  "tp_lockout": [
+   "review"
+  ]
+ },
+ "segmentation": "excursion",
+ "configs": [
+  "common/configs/cgmacros_eval.toml",
+  "methods/harvey/configs/harvey.toml"
+ ]
+}

@@ -1,0 +1,17 @@
+analysis,route,group,kept_events,split,split_pct
+main,B,overall,1100,32,2.9
+main,B,healthy,369,3,0.8
+main,B,prediabetes,348,6,1.7
+main,B,T2D,383,23,6.0
+main,A,overall,514,10,1.9
+main,A,healthy,170,1,0.6
+main,A,prediabetes,173,3,1.7
+main,A,T2D,171,6,3.5
+same_raw,B,overall,1109,33,3.0
+same_raw,B,healthy,377,4,1.1
+same_raw,B,prediabetes,349,7,2.0
+same_raw,B,T2D,383,22,5.7
+same_raw,A,overall,496,6,1.2
+same_raw,A,healthy,171,0,0.0
+same_raw,A,prediabetes,155,0,0.0
+same_raw,A,T2D,170,6,3.5

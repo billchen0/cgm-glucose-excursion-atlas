@@ -63,6 +63,9 @@ docs/preprocessing-spec.md  the contract the code implements
 docs/dataset-shape.md       what the dataset actually is, measured
 tests/                      the pipeline's test suite, including adversarial invariants
 data/raw|interim|processed  git-ignored; outputs land in data/processed/<run-id>/
+
+replication/                detection method replications on CGMacros
+                            (see replication/README.md)
 ```
 
 ## The dataset, measured rather than assumed
