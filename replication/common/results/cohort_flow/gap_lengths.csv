@@ -1,0 +1,7 @@
+gap_length_min,n_gaps_all_data,n_gaps_after_warmup,n_participants_after_warmup,missing_min_after_warmup,interpolated,top_participant_share_after_warmup
+<=5,800,630,12,1410.0,True,CGMacros-007 (76%)
+5-15,260,206,6,1607.0,True,CGMacros-007 (88%)
+15-30,90,81,1,1512.0,True,CGMacros-007 (100%)
+30-60,0,0,0,0.0,False,
+60-120,0,0,0,0.0,False,
+>120,2,2,2,15447.0,False,CGMacros-018 (50%)

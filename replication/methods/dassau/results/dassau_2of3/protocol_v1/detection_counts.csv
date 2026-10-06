@@ -1,0 +1,4 @@
+adjacent_rule,route,rule,raw_detections,removed_by_rule,removed_in_scoring_window,removed_outside_scoring_window,ignored_by_tp_lockout,kept_scored_TP_FP,kept_not_scored
+refractory,B,ours,3000,1401,636,765,0,678,921
+tp_lockout,B,ours,3032,0,0,0,518,813,1701
+tp_lockout,B,review,3032,0,0,0,494,837,1701

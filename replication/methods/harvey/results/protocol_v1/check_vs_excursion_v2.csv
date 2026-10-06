@@ -1,0 +1,16 @@
+rule,item,rows_old,rows_new,identical
+refractory,summary.csv,6,6,True
+refractory,recovery_agreement.csv,24,24,True
+refractory,detections.csv,2181,2181,True
+refractory,meals.csv,666,666,True
+refractory,recovery_features.csv,486,486,True
+refractory,params/chosen_params_routeB_ours.json,6,6,True
+tp_lockout,summary.csv,6,6,True
+tp_lockout,recovery_agreement.csv,24,24,True
+tp_lockout,detections.csv,2463,2463,True
+tp_lockout,meals.csv,666,666,True
+tp_lockout,recovery_features.csv,542,542,True
+tp_lockout,params/chosen_params_routeB_ours.json,6,6,True
+tp_lockout review vs reference_tp_lockout,summary.csv,6,6,True
+tp_lockout review vs reference_tp_lockout,detections.csv,2463,2463,True
+tp_lockout review vs reference_tp_lockout,meals.csv,666,666,True

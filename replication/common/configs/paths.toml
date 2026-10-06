@@ -1,0 +1,5 @@
+# Data location, the single setting for every script and the dashboard.
+# Relative paths are resolved from this repository's root (the folder with README.md).
+# Override with the environment variable CGMACROS_DIR.
+
+cgmacros_dir = "../../CGMacros"      # CGMacros folder two levels above the repository root (outside the repo)

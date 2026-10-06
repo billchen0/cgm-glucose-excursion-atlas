@@ -1,0 +1,25 @@
+{
+ "method": "lim",
+ "title": "Lim wavelet PPGR, 30 mg/dL",
+ "date": "2026-10-06",
+ "results_dir": "protocol_v1_h30",
+ "main_rule": "refractory",
+ "adjacent_rules": [
+  "refractory",
+  "tp_lockout"
+ ],
+ "routes": [
+  "B"
+ ],
+ "matching_rule": "ours",
+ "extra_matching_rules": {
+  "tp_lockout": [
+   "review"
+  ]
+ },
+ "segmentation": "excursion",
+ "configs": [
+  "common/configs/cgmacros_eval.toml",
+  "methods/lim/configs/lim.toml"
+ ]
+}

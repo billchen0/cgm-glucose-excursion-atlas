@@ -1,0 +1,9 @@
+adjacent_rule,route,pairs,no_rise_det,no_rise_ref,excluded_either,used
+tp_lockout,A,253,0,5,5,248
+tp_lockout,B,542,0,10,10,532
+meal_window_max_peak,A,221,0,2,2,219
+meal_window_max_peak,B,441,0,5,5,436
+refractory,A,232,0,5,5,227
+refractory,B,486,0,8,8,478
+excursion_end,A,241,0,4,4,237
+excursion_end,B,511,0,8,8,503

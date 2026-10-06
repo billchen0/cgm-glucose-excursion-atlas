@@ -1,0 +1,67 @@
+# Faccioli (super-twisting observer + Kalman derivative) method settings. Merged over
+# common/configs/cgmacros_eval.toml by common.evaluation.load_config. Spec: Hochsmann 2026
+# Supplementary Methods and Supplementary Table 1 Eq. 7; Faccioli 2022 for the observer, the
+# Kalman filter and the gain rule. Deviations: methods/faccioli/docs/deviations.md.
+# All settings below were fixed before any CGMacros run (2026-10-05).
+
+[methods.faccioli]
+sampling_min = 5                     # native Dexcom readings (E1); Hochsmann and Faccioli: 5 min
+median_points = 3                    # causal 3-point median filter (Hochsmann; F3)
+
+[methods.faccioli.observer]          # observer bound L (F5)
+gain_rule = "grid"                   # "grid": L = grid parameter l_bound, tuned on Route B (F5b,
+                                     #   decided 2026-10-05 after the first run, user decision);
+                                     # "night": L = max F_hat over 00:00-07:00 of the same day
+                                     #   (F5a, Faccioli's first-night rule per day; first run,
+                                     #   results/protocol_v1_nightgain/, src/run_nightgain.py)
+night_end_h = 7                      # night rule only                      # L = max F_hat over 00:00-07:00 of the same day
+l_floor = 0.02                       # mg/dL/min^2; lower bound so a flat night cannot give L = 0
+l_provisional = 1.0e6                # non-saturating gain used only to compute F_hat
+
+[methods.faccioli.kalman]            # Faccioli 2022 Eqs. 11-12 (per-sample units)
+sigma_w2 = 0.01                      # stated (Faccioli, after its ref. 37)
+sigma_v2 = 4.0                       # stated
+p0_rate_sd = 5.0                     # default: 1 mg/dL/min = 5 mg/dL per sample (as Dassau D6)
+p0_acc_sd = 2.5                      # default: 0.1 mg/dL/min^2 = 2.5 mg/dL per sample^2
+warmup_samples = 2                   # default: 10 min, as Dassau D6
+
+[methods.faccioli.grid]              # Hochsmann 2026 Supplementary Table 1, Eq. 7
+th_res = [1.0, 4.0, 0.1]             # Th_Res (mg/dL)
+th_der = [0.2, 0.5, 0.1]             # Th_Der (mg/dL/min)
+# Observer bound L (mg/dL/min^2), gain_rule "grid" only. Fixed before the second run
+# (2026-10-05): 8 log-spaced values 0.02 to 0.6 (covers the night-rule values of the first run,
+# 10th-90th percentile 0.12-0.60, and the floor 0.02) plus the night-rule median 0.28.
+l_bound = { values = [0.02, 0.0325, 0.0529, 0.0859, 0.14, 0.227, 0.28, 0.369, 0.6] }
+
+[methods.faccioli.about]
+title = "Faccioli STMD"
+paper = "Faccioli S, Sala-Mira I, Diez JL, Facchinetti A, Sparacino G, Del Favero S, Bondia J. Super-twisting-based meal detector for type 1 diabetes management: improvement and assessment in a real-life scenario. Comput Methods Programs Biomed 2022;219:106736. https://doi.org/10.1016/j.cmpb.2022.106736"
+implementation = "Hochsmann 2026 review rule (Supplementary Table 1 Eq. 7, 3-point median filter, gain per day). Observer, Kalman filter and gain rule from Faccioli 2022. CGM only: the observer has no insulin term."
+description = [
+  "A causal 3-point median filter removes single-sample CGM spikes.",
+  "A super-twisting observer (implicit discretisation) tracks glucose. Its residual Res rises when the glucose disturbance exceeds the bound L.",
+  "The observer bound L is one global value, tuned on Route B with the two thresholds (deviations F5b). It was added after the first run: Faccioli's first-night gain rule, applied per day, gave Sens of about 20 % (results/protocol_v1_nightgain/).",
+  "A Kalman filter (three-state, Faccioli's noise settings) gives the glucose derivative dG.",
+  "A meal flag is raised when Res > Th_Res and dG > Th_Der (Eq. 7). A detection is the first sample of each run of flags (rising edge).",
+]
+grid_source = "Hochsmann 2026 Supplementary Table 1, Equation 7: Th_Res in {1.0, 1.1, ..., 4.0} mg/dL, Th_Der in {0.2, 0.3, 0.4, 0.5} mg/dL/min. L: 8 log-spaced values 0.02 to 0.6 plus 0.28 mg/dL/min^2, set after the first run to cover its night-rule values (deviations F5b)"
+param_labels = { th_res = "Th_Res (mg/dL)", th_der = "Th_Der (mg/dL/min)", l_bound = "L (mg/dL/min^2)" }
+deviations = "methods/faccioli/docs/deviations.md"
+
+[methods.faccioli.about.hochsmann2026_table1]   # tuned per participant, mean +/- SD
+th_der = "0.23 +/- 0.11"
+th_res = "1.25 +/- 0.54"
+f2 = "0.82 +/- 0.09"
+
+[methods.faccioli.about.hochsmann2026_table2]
+sensitivity_pct = 64.4
+fp_per_day = 1.39
+delay_mean_min = 39.6
+cohort = "16 healthy young adults, Libre 2 (resampled to 5 min), 3 meals/day, afternoon detections suppressed, per-participant tuning"
+
+[methods.faccioli.about.original]
+note = "Faccioli 2022 Table 2: median [IQR] over 30 T1D adults, free-living, 180-min TP window, not like-for-like"
+recall_pct = "70 [13]"
+precision_pct = "73 [26]"
+fp_per_day = "1.4 [1.4]"
+detection_time_min = "45 [45]"

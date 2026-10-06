@@ -1,0 +1,96 @@
+# All rule choices for the CGMacros detector evaluation.
+# Source of truth: docs/evaluation_plan_v3.md (section numbers below refer to it).
+# Every choice not fixed by the plan or by the source paper is logged in common/docs/deviations.md (method-specific ones in methods/<name>/docs/).
+
+seed = 20260929
+
+[data]
+device = "Dexcom GL"                 # 2.1: Dexcom only
+min_valid_days = 7                   # 2.4 rule 4 (42 participants)
+short_gap_interp_min = 30            # 2.3 (applied by common/qc/build_cohort_flow.py)
+meal_merge_min = 30                  # 2.5 (applied by common/cgmacros.py)
+ground_truth_meals = ["breakfast", "lunch"]   # 3: primary ground truth
+
+[scoring]
+night_start_h = 22                   # 4: night block-out 22:00-07:00
+night_end_h = 7
+window_start_h = 7                   # 4: scoring window 07:00 ...
+window_end_after_lunch_min = 180     # ... to lunch start + 180 min
+lockout_min = 120                    # 7.1: 120-min lockout after each TP (Hochsmann 2026)
+# 7.1 adjacent-detection rule (common/evaluation/postprocess.py):
+#   "tp_lockout"           reference run (methods/harvey/results/reference_tp_lockout/): lockout_min applied after each TP
+#   "meal_window_max_peak" one detection per Lim 2026 clock window, highest peak (no TP lockout)
+#   "refractory"           refractory_min after every kept detection (no TP lockout)
+#   "baseline_return"      merge detections until glucose returns near baseline (no TP lockout)
+adjacent_rule = "tp_lockout"
+# a meal is scored only if its TP window [start - before, start + after] reaches into the
+# scoring window (default, see deviations.md D-E3)
+fp_hours_secondary = true            # 7: FP per scored hour reported next to FP/day
+
+[scoring.rules.ours]                 # 7: 30 min before to 120 min after the logged start
+tp_before_min = 30
+tp_after_min = 120
+
+[scoring.rules.review]               # Hochsmann 2026 Methods: only detections after the start
+tp_before_min = 0
+tp_after_min = 120
+
+[adjacent_rules.meal_window_max_peak]   # label-free; Lim 2026 (JDST 20(3):664-672), p. 666
+peak_horizon_min = 180               # peak = max glucose in (t, t + 180] (as the recovery rule)
+[adjacent_rules.meal_window_max_peak.windows]   # detection onset, both ends inclusive
+breakfast = ["06:00", "11:45"]
+lunch = ["12:00", "16:00"]
+dinner = ["17:00", "21:00"]
+
+[adjacent_rules.refractory]          # label-free; main rule of the standard protocol (deviations Z1)
+refractory_min = 120                 # drop a detection <= 120 min after the previous kept one
+
+[adjacent_rules.baseline_return]     # label-free; fixed and prespecified, not tuned (2026-10-01)
+lookback_min = 60                    # baseline b = min glucose in [d0 - 60, d0]
+abs_tol_mg_dl = 10                   # close at first t after the running peak with
+rel_tol = 0.20                       #   glucose(t) <= b + max(10, 0.20 * (P(t) - b))
+max_event_min = 180                  # not closed by d0 + 180 -> closes there, censored
+
+[adjacent_rules.excursion_end]       # label-free; uses the shared [excursion] definition
+                                     # (detections before the excursion end are merged)
+
+[excursion]                          # shared excursion definition (common/evaluation/excursion.py),
+                                     # fixed and prespecified, not tuned (2026-10-01)
+lookback_min = 60                    # baseline b = min glucose in [a - 60, a] (valid minutes)
+abs_tol_mg_dl = 10                   # return: glucose <= b + max(10, 0.20 * (P - b))
+rel_tol = 0.20
+trough_drop = 0.50                   # trough: P - m >= 0.50 * (P - b)
+trough_rise_mg_dl = 10               #   and glucose rises to >= m + 10 ...
+trough_confirm_min = 30              #   ... within (t_m, t_m + 30]
+max_event_min = 180                  # censor at a + 180
+interrupt_window_min = 30            # trough_interrupted: det (t_m, t_m+30]; ref [t_m-30, t_m+30]
+
+[protocol]                           # standard protocol for new methods (common/evaluation/protocol.py;
+                                     # decisions in common/docs/deviations.md section Z, 2026-10-05).
+                                     # The keys above stay as they are, so earlier runs reproduce.
+adjacent_rules = ["refractory", "tp_lockout"]   # first = main (Z1); tp_lockout = comparison only (Z2)
+routes = ["B"]                       # Route B only (Z4)
+segmentation = "excursion"           # recovery features use the frozen [excursion] end (Z5)
+matching_rule = "ours"
+results_dir = "protocol_v1"          # methods/<name>/results/<results_dir>/
+
+[protocol.extra_matching_rules]      # extra matching rules per adjacent rule
+tp_lockout = ["review"]              # 0 to +120 min, for comparison with Hochsmann 2026 Table 2
+
+[tuning]
+objective = "F2"                     # 6.2
+beta = 2
+# ties: higher F2, then lower FP/day, then shorter mean delay, then grid order (D-E6)
+route_a_validation_fraction = 0.5    # 6.1 Route A: per-participant day split
+route_b_folds = 5                    # 6.1 Route B: participant-level CV, stratified by group
+
+[metrics]
+bootstrap_n = 2000                   # participant-level bootstrap for 95% CI
+ci = 0.95
+
+[features]                           # 8: PROVISIONAL segmentation rule (D-E9)
+baseline_min = 30                    # mean glucose in [anchor - 30, anchor)
+horizon_min = 180                    # peak and recovery searched up to anchor + 180
+segmentation = "provisional"         # "provisional" (E9) or "excursion" (shared [excursion] end)
+series = "1min"                      # QC'd 1-min series (2.2); windows with any missing
+                                     # minute in [anchor - 30, anchor + 180] are not featurised

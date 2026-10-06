@@ -1,0 +1,17 @@
+analysis,route,group,merged,merged_over_120_min,long_pct
+main,B,overall,452,44,9.7
+main,B,healthy,100,7,7.0
+main,B,prediabetes,126,7,5.6
+main,B,T2D,226,30,13.3
+main,A,overall,158,11,7.0
+main,A,healthy,32,0,0.0
+main,A,prediabetes,42,0,0.0
+main,A,T2D,84,11,13.1
+same_raw,B,overall,452,44,9.7
+same_raw,B,healthy,100,7,7.0
+same_raw,B,prediabetes,126,7,5.6
+same_raw,B,T2D,226,30,13.3
+same_raw,A,overall,158,11,7.0
+same_raw,A,healthy,32,0,0.0
+same_raw,A,prediabetes,42,0,0.0
+same_raw,A,T2D,84,11,13.1

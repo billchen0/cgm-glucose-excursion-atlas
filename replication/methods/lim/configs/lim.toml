@@ -1,0 +1,39 @@
+# Lim 2026 wavelet PPGR identification, breakfast and lunch windows. Merged over
+# common/configs/cgmacros_eval.toml by common.evaluation.load_config.
+# Deviations: methods/lim/docs/deviations.md. All settings fixed before any CGMacros run (2026-10-06).
+
+[methods.lim]
+sampling_min = 5                     # native Dexcom readings (E1); Lim used 5-min data
+gauss_sigma_samples = 2.0            # Gaussian smoothing sigma (10 min); Appendix A missing, default (L2)
+wavelet = "gaus1"                    # PyWavelets first-derivative-of-Gaussian wavelet (L3)
+wavelet_scale = 15                   # samples; calibrated on Lim Fig. 1 (meal 08:00, peak 09:00, back 10:00):
+                                     # the coefficient maximum and minimum fall at 08:05 and 10:00 (L3)
+
+[methods.lim.windows]                # Lim p. 666, start of the PPGR, both ends inclusive; dinner not used
+breakfast = ["06:00", "11:45"]
+lunch = ["12:00", "16:00"]
+
+[methods.lim.grid]                   # fixed, not tuned (Lim); 20 and 30 are sensitivity runs (src/run_sensitivity.py)
+min_height = { values = [10] }       # minimum PPGR height (mg/dL)
+
+[methods.lim.about]
+title = "Lim wavelet PPGR"
+paper = "Lim et al. A wavelet AI algorithm to automatically identify postprandial glucose responses from continuous glucose monitoring profiles in people without diabetes. J Diabetes Sci Technol 2026;20(3):664-672. https://doi.org/10.1177/19322968261427499"
+implementation = "As described in Lim 2026 (Methods, PPGR definition and the four-stage framework). Appendices A-C (Gaussian filter, wavelet details, tie-break) are not in the PDF; those details are defaults (deviations L2-L5). Breakfast and lunch windows only. Fixed parameters, not tuned."
+description = [
+  "Each 24-h CGM profile is smoothed with a Gaussian filter and transformed with a Gaussian wavelet (PyWavelets).",
+  "Each wavelet maximum inside a meal window and the next wavelet minimum form a candidate segment. Peak = highest glucose in it; PPGR start = lowest glucose before the peak.",
+  "Segments with height (peak minus start) >= 10 mg/dL are kept; the highest one per window is chosen (ties: earlier start).",
+  "One PPGR per window: breakfast 06:00-11:45 and lunch 12:00-16:00. Detection time = PPGR start.",
+  "Window-limited: at most 2 detections per day, so the method cannot find excursions outside the windows.",
+]
+grid_source = "Lim 2026 p. 666: fixed minimum height 10 mg/dL (not tuned); 20 and 30 mg/dL as sensitivity runs"
+param_labels = { min_height = "Minimum height (mg/dL)" }
+deviations = "methods/lim/docs/deviations.md"
+comparison_note = "Lim is window-limited (one detection per breakfast and lunch window, at most 2 per day), so its FP/day is not comparable with the all-day detectors."
+
+[methods.lim.about.original]
+note = "Lim 2026: median absolute PPGR start-time error [IQR], not Sens or FP/day; not like-for-like"
+hall_breakfast_min = "10 [4, 19]"
+cgmacros_dexcom_breakfast_lunch_dinner_min = "14 [6, 29], 36 [19, 63], 28 [11, 56]"
+cgmacros_libre_breakfast_lunch_dinner_min = "15 [7, 27], 26 [14, 47], 18 [9, 39]"

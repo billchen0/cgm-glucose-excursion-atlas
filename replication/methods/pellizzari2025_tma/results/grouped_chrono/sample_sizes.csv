@@ -1,0 +1,5 @@
+group,n_subjects,meals_total,meals_train,test_meals_C05,test_days,template_curves_per_fold
+healthy,15,575,351,204,57.1,70
+prediabetes,16,579,353,200,60.8,75
+T2D,14,439,270,158,55.1,65
+all,45,1593,974,562,173.0,220

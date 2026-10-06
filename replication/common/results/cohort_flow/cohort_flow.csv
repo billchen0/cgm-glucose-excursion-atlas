@@ -1,0 +1,33 @@
+group,step,participants,participants_removed,days,days_removed,bl_meals,bl_meals_removed
+overall,0 Screened (all Dexcom data),45,,502,,852,
+overall,1 Remove first 24 h after each sensor insertion,45,0,457,45,765,87
+overall,2 Remove days with a gap > 120 min,45,0,354,103,700,65
+overall,   2a of which partial first or last day of a sensor,,,,91,,62
+overall,   2b of which internal sensor gap,,,,12,,3
+overall,3 Remove days without both breakfast and lunch,45,0,345,9,690,10
+overall,4 Minimum valid days >= 7 [Confirm with PhD],42,3,333,12,666,24
+overall,4 Minimum valid days >= 8 [Confirm with PhD],39,6,312,33,624,66
+healthy,0 Screened (all Dexcom data),15,,174,,287,
+healthy,1 Remove first 24 h after each sensor insertion,15,0,159,15,257,30
+healthy,2 Remove days with a gap > 120 min,15,0,119,40,238,19
+healthy,   2a of which partial first or last day of a sensor,,,,30,,19
+healthy,   2b of which internal sensor gap,,,,10,,0
+healthy,3 Remove days without both breakfast and lunch,15,0,119,0,238,0
+healthy,4 Minimum valid days >= 7 [Confirm with PhD],15,0,119,0,238,0
+healthy,4 Minimum valid days >= 8 [Confirm with PhD],14,1,112,7,224,14
+prediabetes,0 Screened (all Dexcom data),16,,174,,298,
+prediabetes,1 Remove first 24 h after each sensor insertion,16,0,158,16,267,31
+prediabetes,2 Remove days with a gap > 120 min,16,0,123,35,240,27
+prediabetes,   2a of which partial first or last day of a sensor,,,,33,,24
+prediabetes,   2b of which internal sensor gap,,,,2,,3
+prediabetes,3 Remove days without both breakfast and lunch,16,0,116,7,232,8
+prediabetes,4 Minimum valid days >= 7 [Confirm with PhD],13,3,104,12,208,24
+prediabetes,4 Minimum valid days >= 8 [Confirm with PhD],13,3,104,12,208,24
+T2D,0 Screened (all Dexcom data),14,,154,,267,
+T2D,1 Remove first 24 h after each sensor insertion,14,0,140,14,241,26
+T2D,2 Remove days with a gap > 120 min,14,0,112,28,222,19
+T2D,   2a of which partial first or last day of a sensor,,,,28,,19
+T2D,   2b of which internal sensor gap,,,,0,,0
+T2D,3 Remove days without both breakfast and lunch,14,0,110,2,220,2
+T2D,4 Minimum valid days >= 7 [Confirm with PhD],14,0,110,0,220,0
+T2D,4 Minimum valid days >= 8 [Confirm with PhD],12,2,96,14,192,28

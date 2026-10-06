@@ -1,0 +1,39 @@
+# Samadi (fuzzy-logic IGT) method settings. Merged over common/configs/cgmacros_eval.toml by
+# common.evaluation.load_config. Spec: Hochsmann 2026 Supplementary Methods and Supplementary
+# Table 1, Equations 14-15; Samadi 2018 for the shapes. Deviations: methods/samadi/docs/deviations.md.
+
+[methods.samadi]
+sampling_min = 5                     # native Dexcom readings (E1), as Harvey; Hochsmann used 5 min
+fit_points = 4                       # quadratic fit to the four most recent samples (S2)
+d2_scale_min = 15                    # d2G set centre gamma2 = gamma1 / 15 min (default, S4),
+                                     # fixed before any CGMacros run (2026-10-05)
+
+[methods.samadi.grid]                # Hochsmann 2026 Supplementary Methods lines 132-133
+gamma1 = [1.0, 4.0, 0.5]             # slope gain (mg/dL/min; unit not stated, S3)
+th_act = [1.0, 3.0, 0.1]             # Threshold_act (IGT units)
+
+[methods.samadi.about]
+title = "Samadi IGT"
+paper = "Samadi S, Rashid M, Turksoy K, et al. Automatic detection and estimation of unannounced meals for multivariable artificial pancreas system. Diabetes Technol Ther 2018;20(3):235-246. https://doi.org/10.1089/dia.2017.0364"
+implementation = "Simplified rule as in the Hochsmann 2026 review (Supplementary Methods, Supplementary Table 1 Eqs. 14-15). Shapes and weights from Samadi 2018 Fig. 2. Membership functions are defaults (Samadi 2017, where they are defined, is not available)."
+description = [
+  "At each 5-min sample, a quadratic is fitted to the four most recent glucose points. Its first and second derivatives at the newest point are d1G and d2G.",
+  "Each derivative gets fuzzy memberships for negative, zero and positive. The d1G sets have centres -gamma1, 0, +gamma1; the d2G sets use gamma1 / 15 min.",
+  "Seven shapes (B, F, C, G, A, E, D; Samadi 2018 Fig. 2) get the product of the two sign memberships. IGT is their weighted average with weights -3 to +3 (Eq. 14), so IGT lies in [-3, 3].",
+  "A meal flag is raised when IGT > Threshold_act (Eq. 15). The original activation, pause and deactivation logic is omitted, as in the review.",
+  "A detection is the first sample of each run of flags (rising edge).",
+]
+grid_source = "Hochsmann 2026 Supplementary Methods (lines 132-133): gamma1 in {1.00, 1.50, ..., 4.00}, Threshold_act in {1.0, 1.1, ..., 3.0}"
+param_labels = { gamma1 = "gamma1 (mg/dL/min)", th_act = "Threshold_act (IGT)" }
+deviations = "methods/samadi/docs/deviations.md"
+
+[methods.samadi.about.hochsmann2026_table1]   # tuned per participant, mean +/- SD
+gamma1 = "1 +/- 1"
+th_act = "1.33 +/- 0.49"
+f2 = "0.86 +/- 0.04"
+
+[methods.samadi.about.hochsmann2026_table2]
+sensitivity_pct = 89.8
+fp_per_day = 2.42
+delay_mean_min = 58.5
+cohort = "16 healthy young adults, Libre 2 (resampled to 5 min), 3 meals/day, afternoon detections suppressed, per-participant tuning"

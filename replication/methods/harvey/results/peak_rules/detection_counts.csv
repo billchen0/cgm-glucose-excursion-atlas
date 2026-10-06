@@ -1,0 +1,9 @@
+adjacent_rule,route,raw_detections,removed_by_rule,removed_in_scoring_window,removed_outside_scoring_window,ignored_by_tp_lockout,kept_scored_TP_FP,kept_not_scored,kept_06_to_07_not_scored
+tp_lockout,A,1028,0,0,0,125,320,583,
+meal_window_max_peak,A,932,525,159,366,0,257,150,13.0
+refractory,A,985,334,143,191,0,290,361,
+baseline_return,A,967,257,106,151,0,315,395,
+tp_lockout,B,2463,0,0,0,300,724,1439,
+meal_window_max_peak,B,2097,1257,370,887,0,513,327,30.0
+refractory,B,2181,784,309,475,0,604,793,
+baseline_return,B,2229,665,265,400,0,668,896,

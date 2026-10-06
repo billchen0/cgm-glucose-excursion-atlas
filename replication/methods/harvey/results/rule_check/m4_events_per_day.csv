@@ -1,0 +1,17 @@
+analysis,route,group,days_excursion_end,days_refractory,mean_excursion_end,mean_refractory,median_excursion_end,median_refractory,mean_diff_pct
+main,B,overall,333.0,333.0,3.988,3.303,4.0,3.0,20.727
+main,B,healthy,119.0,119.0,4.109,3.101,4.0,3.0,32.52
+main,B,prediabetes,104.0,104.0,4.038,3.346,4.0,3.0,20.69
+main,B,T2D,110.0,110.0,3.809,3.482,4.0,3.0,9.399
+main,A,overall,168.0,168.0,3.536,3.06,3.0,3.0,15.564
+main,A,healthy,60.0,60.0,3.833,2.833,4.0,3.0,35.294
+main,A,prediabetes,52.0,52.0,3.519,3.327,3.0,3.5,5.78
+main,A,T2D,56.0,56.0,3.232,3.054,3.0,3.0,5.848
+same_raw,B,overall,333.0,333.0,3.988,3.33,4.0,3.0,19.748
+same_raw,B,healthy,119.0,119.0,4.109,3.168,4.0,3.0,29.708
+same_raw,B,prediabetes,104.0,104.0,4.038,3.356,4.0,3.0,20.344
+same_raw,B,T2D,110.0,110.0,3.809,3.482,4.0,3.0,9.399
+same_raw,A,overall,168.0,168.0,3.536,2.952,3.0,3.0,19.758
+same_raw,A,healthy,60.0,60.0,3.833,2.85,4.0,3.0,34.503
+same_raw,A,prediabetes,52.0,52.0,3.519,2.981,3.0,3.0,18.065
+same_raw,A,T2D,56.0,56.0,3.232,3.036,3.0,3.0,6.471
