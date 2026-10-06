@@ -1,0 +1,84 @@
+# Preprocessing configuration — CGMacros
+#
+# Every threshold here is a *reporting* threshold, not a silent correction. The pipeline
+# never deletes, clips, interpolates, or repairs a glucose value to satisfy a rule below.
+# A rule that fires adds a flag; the row and its raw value always survive.
+
+schema_version: 1
+
+# ---------------------------------------------------------------------------
+# Streams
+# ---------------------------------------------------------------------------
+streams:
+  # Dexcom G6 Pro is the primary analysis stream.
+  primary: dexcom
+  # Libre Pro reproduces the primary result; it is kept as a separate column and
+  # is never averaged with, or back-filled from, the primary stream.
+  replication: libre
+  # Documented sensor analog range, in mg/dL. A value outside the range is
+  # retained and flagged out_of_documented_range; it is not dropped or clipped.
+  documented_range_mgdl:
+    dexcom: [40, 400]
+    libre: [40, 500]
+
+# ---------------------------------------------------------------------------
+# Quality control (v1 = objective checks only)
+# ---------------------------------------------------------------------------
+qc:
+  # A repeated timestamp for the same participant and stream.
+  duplicate_timestamp:
+    enabled: true
+
+  # Absolute change in glucose divided by absolute change in time, in mg/dL per
+  # minute. CGM physiology admits roughly 2-4 mg/dL/min, so this screens only.
+  rate_of_change:
+    enabled: true
+    max_mgdl_per_min: 4.0
+
+  # A run of consecutive equal readings at least this long is a flatline, i.e. a
+  # stuck sensor reading rather than physiology.
+  flatline:
+    enabled: true
+    min_run_minutes: 20
+
+  # A single sample this far from the midpoint of its two neighbours, while both
+  # neighbours are close to each other, is a probable isolated spike.
+  isolated_spike:
+    enabled: true
+    min_delta_mgdl: 50
+    neighbour_max_delta_mgdl: 25
+
+  # Explicit low-reading sentinel that some sensors emit when below range.
+  possible_compression_low:
+    enabled: true
+    value_mgdl: 40
+
+  # Advanced, literature-dependent heuristics. Present but disabled until their
+  # thresholds are validated against this dataset.
+  advanced:
+    enabled: false
+
+# ---------------------------------------------------------------------------
+# Grid and gaps
+# ---------------------------------------------------------------------------
+grid:
+  # Canonical time grid cadence, in seconds.
+  cadence_seconds: 300
+  # The canonical grid preserves absence, so a bucket with no observation is
+  # null. Never interpolate anywhere in the canonical outputs.
+  interpolate: false
+
+gaps:
+  # Report every missing run at least this long, in seconds.
+  min_gap_seconds: 900
+  # Contiguous-usable-run segmentation. A gap at least this long ends a segment.
+  segment_break_seconds: 3600
+
+# ---------------------------------------------------------------------------
+# Detector-ready view (opt-in, written separately and never canonical)
+# ---------------------------------------------------------------------------
+detector_view:
+  enabled: false
+  # No default. A caller must state the maximum gap it is willing to bridge, in
+  # seconds, before interpolation runs at all.
+  max_gap_seconds: null

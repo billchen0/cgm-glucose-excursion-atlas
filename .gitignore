@@ -1,0 +1,22 @@
+# Derived data, local machine config, and caches. Nothing here is versioned.
+data/raw/*
+data/interim/*
+data/processed/*
+!data/**/.gitkeep
+
+# Local dataset pointer written by `cgm serve` / `cgm preprocess`
+.cgm-local.yaml
+.cgm-local.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# OS
+.DS_Store
